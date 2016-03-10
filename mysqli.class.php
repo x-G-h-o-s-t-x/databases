@@ -92,7 +92,7 @@ class db {
         return $this->mysqli->error;
     }
 
-    // close the mysqli connection
+    // close the mysqli connection to database
     public function close() {
         $this->mysqli->close();
     }
