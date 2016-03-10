@@ -4,9 +4,9 @@
 
 CREATE TABLE IF NOT EXISTS `categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `forum_id` int(11) NOT NULL,
-  `category_title` text NOT NULL,
-  `category_description` text NOT NULL,
+  `forum` int(11) NOT NULL,
+  `title` text NOT NULL,
+  `description` text NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
 -- Dumping data for table `categories`
 --
 
-INSERT INTO `categories` (`id`, `forum_id`, `category_title`, `category_description`) VALUES
+INSERT INTO `categories` (`id`, `forum`, `title`, `description`) VALUES
 (1, 1, 'General Discussions', 'General web/wapmasters discussions forum.'),
 (2, 1, 'Coding Forum', 'HTML, WML, CSS, mySQL, PHP, ASP, CGI, JavaScript coding discussions and help.'),
 (3, 1, 'Scripts Forum', 'Free HTML, WML, CSS, mySQL, PHP scripts for websites and mobile wapsites.'),
