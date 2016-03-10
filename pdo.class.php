@@ -1,6 +1,6 @@
 <?php
 // Prevent direct access from url to this file
-if(stristr(htmlentities($_SERVER['SCRIPT_NAME']), 'test.class.php')): // input your class file name here
+if(stristr(htmlentities($_SERVER['SCRIPT_NAME']), 'pdo.class.php')): // input your class file name here
     echo '<meta http-equiv="Refresh" content="0; url=index.php">'; // input your index location here
     die();
 endif;
