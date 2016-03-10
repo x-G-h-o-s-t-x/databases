@@ -7,6 +7,7 @@ $categories = db::mysqli()->query('SELECT * FROM `categories`');
 if($categories->count() > 0):
     foreach($categories->result() as $category):
         echo $category->title, '<br/>';
+        echo $category->description, '<br/>';
     endforeach;
 endif;
 
@@ -16,7 +17,8 @@ db::mysqli()->query('UPDATE `config` SET `site_name`="codemafia"');
 $query = db::mysqli()->query('SELECT * FROM `config`');
 // then use our result function as an array instead:
 $config = $query->result()[0];
-echo '<br/>', $config->site_name;
+echo $config->site_name, '<br/>';
+echo $config->timezone, '<br/>';
 ```
 
 ##### pdo oop db class usage examples:
@@ -30,6 +32,7 @@ db::pdo()->execute();
 if(db::pdo()->count() > 0):
     foreach(db::pdo()->result() as $category):
         echo $category->title, '<br/>';
+        echo $category->description, '<br/>';
     endforeach;
 endif;
 
@@ -41,5 +44,6 @@ db::pdo()->query('SELECT * FROM `config`');
 db::pdo()->execute();
 // then use our result function as an array instead:
 $config = db::pdo()->result()[0];
-echo '<br/>', $config->site_name, '<br/><br/>';
+echo $config->site_name, '<br/>';
+echo $config->timezone, '<br/>';
 ```
