@@ -1,7 +1,6 @@
-# databases
-####mysqli &amp; pdo oop classes to use with php
+### mysqli &amp; pdo oop database classes to use with php
 
-mysqli oop db class usage examples:
+##### mysqli oop db class usage examples:
 ```php
 // multi row table
 $categories = db::mysqli()->query('SELECT * FROM `categories`');
@@ -20,7 +19,7 @@ $config = $query->result()[0];
 echo '<br/>', $config->site_name;
 ```
 
-pdo oop db class usage examples:
+##### pdo oop db class usage examples:
 ```php
 // multi row table
 db::pdo()->query('SELECT * FROM `categories`');
