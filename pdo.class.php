@@ -114,5 +114,10 @@ class db {
     public function debugDumpParams() {
         return $this->query->debugDumpParams();
     }
+
+    // close the pdo connection to database
+    public function close() {
+        $this->pdo = null;
+    }
 }
 ?>
