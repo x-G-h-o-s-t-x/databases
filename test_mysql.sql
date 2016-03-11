@@ -1,5 +1,6 @@
 --
 -- Table structure for table `categories`
+-- A multi row example table
 --
 
 CREATE TABLE IF NOT EXISTS `categories` (
@@ -30,6 +31,7 @@ INSERT INTO `categories` (`id`, `forum`, `title`, `description`) VALUES
 
 --
 -- Table structure for table `config`
+-- A single row example table
 --
 
 CREATE TABLE IF NOT EXISTS `config` (
@@ -49,4 +51,3 @@ CREATE TABLE IF NOT EXISTS `config` (
 
 INSERT INTO `config` (`site_name`, `site_logo`, `timezone`, `seo`, `topics_per_page`, `categories_per_page`, `auto_delete_shouts`, `show_shouts_to_guests`) VALUES
 ('codemafia', 'core/images/codemafia.png', 'Europe/London', 'true', 10, 10, 'true', 'true');
-
