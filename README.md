@@ -2,6 +2,7 @@
 
 ##### mysqli oop db class usage examples:
 ```php
+require_once('mysqli.class.php');
 // multi row table
 $categories = db::mysqli()->query('SELECT * FROM `categories`');
 if($categories->count() > 0):
@@ -19,10 +20,13 @@ $query = db::mysqli()->query('SELECT * FROM `config`');
 $config = $query->result()[0];
 echo $config->site_name, '<br/>';
 echo $config->timezone, '<br/>';
+
+db::mysqli()->close();
 ```
 
 ##### pdo oop db class usage examples:
 ```php
+require_once('pdo.class.php');
 // multi row table
 db::pdo()->query('SELECT * FROM `categories`');
 // or with bind
@@ -46,4 +50,6 @@ db::pdo()->execute();
 $config = db::pdo()->result()[0];
 echo $config->site_name, '<br/>';
 echo $config->timezone, '<br/>';
+
+db::pdo()->close();
 ```
