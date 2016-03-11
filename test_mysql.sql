@@ -20,12 +20,12 @@ INSERT INTO `categories` (`id`, `forum`, `title`, `description`) VALUES
 (2, 1, 'Coding Forum', 'HTML, WML, CSS, mySQL, PHP, ASP, CGI, JavaScript coding discussions and help.'),
 (3, 1, 'Scripts Forum', 'Free HTML, WML, CSS, mySQL, PHP scripts for websites and mobile wapsites.'),
 (4, 1, 'Domains, Hosting, Servers', 'For general discussion about domain names, hosting, cPanel, Plesk etc.'),
-(5, 1, 'Server Management', 'Linux commands. Server configuration, optimization and install instructions.'),
-(6, 1, 'Site/Script testing/error fixing', 'Here you can ask for help fixing some script errors, or just ask for help testing your site with different mobile devices.'),
-(7, 1, 'Design, Templates, Graphics', 'Logos, graphic tools, banners, anything to do with web design and graphics, CSS - styles, templates etc.'),
-(8, 1, 'Marketplace', 'here you can sell your domains, scripts, modifications, design graphics or offer some paid services like script installation etc. You can also place here your requests if you want to buy some scripts.'),
-(9, 2, 'Freelance Jobs &amp; Projects', 'looking for a coder to develop a website or just to make changes, upgrades, improvements to your site, post your job offers here.'),
-(10, 2, 'Sites &amp; Links', 'Show us your sites.');
+(5, 2, 'Server Management', 'Linux commands. Server configuration, optimization and install instructions.'),
+(6, 2, 'Site/Script testing/error fixing', 'Here you can ask for help fixing some script errors, or just ask for help testing your site with different mobile devices.'),
+(7, 2, 'Design, Templates, Graphics', 'Logos, graphic tools, banners, anything to do with web design and graphics, CSS - styles, templates etc.'),
+(8, 3, 'Marketplace', 'here you can sell your domains, scripts, modifications, design graphics or offer some paid services like script installation etc. You can also place here your requests if you want to buy some scripts.'),
+(9, 3, 'Freelance Jobs &amp; Projects', 'looking for a coder to develop a website or just to make changes, upgrades, improvements to your site, post your job offers here.'),
+(10, 3, 'Sites &amp; Links', 'Show us your sites.');
 
 -- --------------------------------------------------------
 
