@@ -34,6 +34,7 @@ class db {
     }
 
     // builds the database connection to work with
+    // http://php.net/manual/en/pdo.construct.php
     public function __construct() {
         if(!isset($this->pdo)):
             try {
@@ -46,11 +47,13 @@ class db {
     }
 
     // runs the pdo queries
+    // http://php.net/manual/en/pdo.prepare.php
     public function query($query) {
         $this->query = $this->pdo->prepare($query);
     }
 
     // binds values to placeholders
+    // http://php.net/manual/en/pdostatement.bindvalue.php
     public function bind($param, $value, $type = null) {
         if(is_null($type)):
             switch(true) {
@@ -71,6 +74,7 @@ class db {
     }
 
     // executes the pdo query
+    // http://php.net/manual/en/pdostatement.execute.php
     public function execute() {
         try {
             return $this->query->execute();
@@ -81,42 +85,51 @@ class db {
     }
 
     // returns the pdo object results in an array
+    // http://php.net/manual/en/pdostatement.fetchall.php
     public function result() {
         return $this->query->fetchAll(PDO::FETCH_OBJ);
     }
 
     // returns the number of rows (count) from a pdo query
+    // http://php.net/manual/en/pdostatement.rowcount.php
     public function count() {
         return $this->query->rowCount();
     }
 
     // returns the pdo last inserted id number
+    // http://php.net/manual/en/pdo.lastinsertid.php
     public function lastInsertId() {
         return $this->pdo->lastInsertId();
     }
 
     // initiates a transaction (turns off autocommit mode)
+    // http://php.net/manual/en/pdo.begintransaction.php
     public function beginTransaction() {
         return $this->pdo->beginTransaction();
     }
 
     // commits a transaction
+    // http://php.net/manual/en/pdo.commit.php
     public function commit() {
         return $this->pdo->commit();
     }
 
     // rolls back the current transaction
+    // http://php.net/manual/en/pdo.rollback.php
     public function rollBack() {
         return $this->pdo->rollBack();
     }
 
     // dumps the information contained by a prepared statement
+    // http://php.net/manual/en/pdostatement.debugdumpparams.php
     public function debugDumpParams() {
         return $this->query->debugDumpParams();
     }
 
     // close the pdo connection to database
+    // http://php.net/manual/en/pdo.connections.php#114822
     public function close() {
+        $this->query = null;
         $this->pdo = null;
     }
 }
