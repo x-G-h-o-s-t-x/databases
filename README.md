@@ -30,8 +30,9 @@ require_once('pdo.class.php');
 // multi row table
 db::pdo()->query('SELECT * FROM `categories`');
 // or with bind
-//db::pdo()->query('SELECT * FROM `categories` WHERE `id`=:id');
-//db::pdo()->bind(':id', '1');
+//db::pdo()->query('SELECT * FROM `categories` WHERE `id` = :id');
+//$placeholders = array(':id' => '1');
+//db::pdo()->bind($placeholders);
 db::pdo()->execute();
 if(db::pdo()->count() > 0):
     foreach(db::pdo()->result() as $category):
